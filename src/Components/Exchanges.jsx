@@ -3,7 +3,7 @@ import axios from "axios"
 import {server} from "../index.js"
 import { Container, HStack, VStack, Image, Heading, Text } from '@chakra-ui/react';
 import Loader from './Loader.jsx';
-import ErrorExchanges from './ErrorExchanges.jsx';
+import ErrorComponent from './ErrorComponent.jsx';
 
 const Exchanges = () => {
   const [loading, setLoading] = useState(true);
@@ -24,13 +24,13 @@ const Exchanges = () => {
   }, []);
   
   if(error){
-    return <ErrorExchanges message={"Error while fetching exchanges!!"}/>
+    return <ErrorComponent message={"Error while fetching exchanges!!"}/>
   }
 
   return (
     <Container maxW={"container.xl"}>
       {loading ? <Loader/> : (<>
-        <HStack wrap={"wrap"}>
+        <HStack wrap={"wrap"} justifyContent="space-evenly">
           {exchanges.map((i)=>(
             <div>
               <ExchangeCard 
