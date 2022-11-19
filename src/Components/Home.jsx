@@ -1,6 +1,6 @@
 import { Box, Image } from '@chakra-ui/react'
 import React from 'react'
-import imgSrc from '../assets/btcimage.png'
+import imgSrc from '../assets/btcimage1.png'
 import {motion} from 'framer-motion'
 
 const Home = () => {
