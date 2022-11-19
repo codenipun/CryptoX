@@ -5,12 +5,15 @@ import Loader from './Loader';
 import {server} from '../index.js'
 import {useParams} from 'react-router-dom'
 import ErrorComponent from './ErrorComponent';
+import Chart from './Chart';
 
 const CoinDetail = () => {
   const [loading, setLoading] = useState(true);
   const [coin, setCoin] = useState({});
   const [error, setError] = useState(false);
   const [currency, setCurrency] = useState("inr");
+  const [days, setDays] = useState("24h");
+  const [chartArray, setChartArray] = useState([]);
   
   const currencySymbol = currency==="inr" ? "₹" : currency==="eur" ? "€" : "$"
 
@@ -19,8 +22,11 @@ const CoinDetail = () => {
     const fetchCoin = async() =>{
       try {
         const {data} = await axios.get(`${server}/coins/${params.id}`);
+        const {data:chartData} = await axios.get(`${server}/coins/${params.id}/market_chart?vs_currency=${currency}&days=${days}`);
+
         setLoading(false);
         setCoin(data);
+        setChartArray(chartData.prices);
         console.log(data);
       } catch (error) {
         setError(true);
@@ -39,7 +45,7 @@ const CoinDetail = () => {
         loading ? <Loader/> : (
           <>
             <Box width={"full"} borderWidth={'1'}>
-              COIN CARD
+              <Chart arr={chartArray} currency={currencySymbol} days={days}/>
             </Box>
             {/* {Button} */}
             <RadioGroup value={currency} onChange={setCurrency} p={'8'}>
