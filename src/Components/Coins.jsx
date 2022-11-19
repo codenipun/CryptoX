@@ -55,6 +55,7 @@ const Coins = () => {
           {coins.map((i)=>(
             <div>
               <CoinsCard 
+              key={i.id}
               id={i.id}
               name={i.name}
               img={i.image} 
@@ -68,7 +69,9 @@ const Coins = () => {
         <HStack w={"full"} overflowX={"auto"} p={'8'} >
             {
               btns.map((item, index)=>(
-                <Button bgColor={"blackAlpha.900"}
+                
+                <Button 
+                      bgColor={"blackAlpha.900"}
                        color={"white"} 
                        onClick={()=>changePage(index+1)}
                        key={index}>{index+1}</Button>
