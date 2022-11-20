@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 
 const Home = () => {
   return (
-    <Stack h={'90vh'} direction={['column', 'row']} justifyContent={'center'} bgColor={'#f5f4f2'} alignItems={'center'}>
+    <Stack minH={'90vh'} direction={['column', 'row']} justifyContent={'center'} bgColor={'#f5f4f2'} alignItems={'center'}>
         <VStack justifyContent='center' alignItems={['flex-start', 'center']} p={['10', '20']}>
           <Text alignSelf={'flex-start'} fontWeight={'bold'} fontSize={'4xl'}>Explore top CryptoCurrencies <br/> With CRYPTO-X </Text>
           <Text>View crypto prices and other stats, including Bitcoin, Ethereum, XRP, and more.</Text>
