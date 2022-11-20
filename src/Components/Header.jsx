@@ -1,27 +1,31 @@
 import { Box, Button, HStack, Text, Stack, color} from '@chakra-ui/react'
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {HashLink} from "react-router-hash-link"
 
 const Header = () => {
   return (
-    <Stack position={'sticky'} p={'4'} shadow={'base'} bgColor={'blackAlpha.900'} direction={'row'}>
-        <Text textTransform={'uppercase'} color='white' fontFamily={'Rajdhani'} w={'full'} fontSize={['2rem','3rem']} alignItems='center'>crypto-x</Text>
+    <Stack alignItems={'center'} justifyContent={'center'} h={['12vh','10vh']} position={'sticky'} px={'10'} shadow={'base'} direction={['column','row']}>
+        <Text textTransform={'uppercase'}  fontFamily={'Rajdhani'} w={['','full']} fontSize={['2rem','3rem']} alignItems='center' >crypto-x</Text>
         <HStack >
-            <Button 
-              css={{"&:hover":{transform:"scale(1.1)", color:'white'}}}
+            <Button
+              css={{"&:hover":{transform:"scale(1.1)", color:'#e39f12'}}}
               variant={"unstyled"} 
-              color={'silver'}
-              ><Link to="/">Home</Link></Button>
-            <Button 
-              css={{"&:hover":{transform:"scale(1.1)", color:'white'}}}
+              ><HashLink to="/">Home</HashLink></Button>
+              <Text>|</Text>
+            <Button mx={'10'}
+              css={{"&:hover":{transform:"scale(1.1)", color:'#e39f12'}}}
               variant={"unstyled"} 
-              color={'silver'}
-              ><Link to="/coins">Coins</Link></Button>
-            <Button 
-              css={{"&:hover":{transform:"scale(1.1)", color:'white'}}}
+              ><HashLink to="/coins">Coins</HashLink></Button>
+              <Text>|</Text>
+            <Button px={'4'}
+              css={{"&:hover":{transform:"scale(1.1)", color:'#e39f12'}}}
               variant={"unstyled"} 
-              color={'silver'}
-              ><Link to="/exchanges">Exchanges</Link></Button>
+              ><HashLink to="/exchanges">Exchanges</HashLink></Button>
+              <Text>|</Text>
+            <Button px={'4'}
+              css={{"&:hover":{transform:"scale(1.1)", color:'#e39f12'}}}
+              variant={"unstyled"} 
+              ><HashLink to="#footer">Contact us!</HashLink></Button>
         </HStack>
     </Stack>
   )

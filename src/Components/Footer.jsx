@@ -3,59 +3,46 @@ import React from 'react'
 import {AiOutlineSend} from'react-icons/ai'
 const Footer = () => {
   return (
-    <div>
-      {/* <Box bgColor={"blackAlpha.900"}
-      color="white"
-      minH={'48'}
-      px='16'
-      py={['16', '8']}>
-
-      <Stack direction={["column", "row"]}
-      alignItems='center' h={'full'}>
-
-        <VStack w='full' alignItems={['center', 'flex-start']}>
-            <Text>
-                cryptoX
-            </Text>
-            <Text>
-                The best crypto trading app in India. We provide guidance at a very reasonable price.
-            </Text>
-        </VStack>
-        <VStack>
-            <Avatar boxSize={'28'} mt={['4', '0']}></Avatar>
-            <Text>Our Founder</Text>
-        </VStack>
-
-      </Stack>
-
-      </Box> */}
-      <Stack direction={['column', 'row']} minH={'40'} p='16' color={'white'} bgColor={"blackAlpha.900"}>
+    <div id='footer'>
+      <Stack direction={['column', 'row']} minH={'40'} px='16' py={'4'} >
             <VStack w={'full'} 
             alignItems="stretch">
-                <Heading textAlign={['center', 'left']}>
-                    Subscribe to our Newsletter
+                <Heading textAlign={['center', 'left']} fontFamily='Rajdhani'>
+                    Contact Us
                 </Heading>
-                <HStack borderBottom={'2px solid white'}>
-                    <Input placeholder="Enter your Email here..." border={'none'}
+                <HStack borderBottom={'2px solid orange'} w={'30vh'}>
+                    <Input placeholder="Name" border={'none'}
                         borderRadius="none"
-                        outline={'none'}
+                        outline={''}
                         focusBorderColor='none'
                     />
-                    <Button colorScheme={'purple'}
-                            variant={'unstyled'}
-                            color="silver"
-                            borderRadius={"0 20px 20px 0"}>
-                        <AiOutlineSend size={20}></AiOutlineSend>
-                    </Button>
                 </HStack>
+                <HStack borderBottom={'2px solid orange'} w={'30vh'}>
+                    <Input placeholder="Email" border={'none'}
+                        borderRadius="none"
+                        outline={''}
+                        focusBorderColor='none'
+                    />
+                </HStack>
+                <HStack borderBottom={'2px solid orange'} w={'30vh'}>
+                    <Input placeholder="Query" border={'none'}
+                        borderRadius="none"
+                        outline={''}
+                        focusBorderColor='none'
+                    />
+                </HStack>
+                <Button w={'30vh'} colorScheme={'orange'}
+                            variant={'solid'}
+                            borderRadius={"20px"}> Send
+                    </Button>
             </VStack>
-            <VStack w='full' borderLeft={['none', '1px solid white']} borderRight={['none', '1px solid white']}>
+            <VStack w='full' borderLeft={['none', '1px solid white']} borderRight={['none', '1px solid white']} alignItems={['', 'center']}>
                 <Heading
                     textAlign={'center'}
                     textTransform={'uppercase'}
                     fontFamily={'Rajdhani'}
                 >crypto-X</Heading>
-                <Text color={'silver'}>&copy; All Rights Reserved</Text>
+                <Text fontSize={'15'} fontWeight={'thin'}>Copyright &copy; 2022. All Rights Reserved.</Text>
             </VStack>
             <VStack w='full'>
                 <Heading
@@ -63,23 +50,25 @@ const Footer = () => {
                     textTransform={'uppercase'}
                 >Social media</Heading>
 
+                <Stack direction={['row', 'column']} >
                 <Button
-                    variant={'link'} color={'silver'}
+                    variant={'link'} color={'orange'} 
                 >
                 <a target={'blank'} href="https://youtube.com">Youtube</a>
                 </Button>
 
                 <Button
-                    variant={'link'} color='silver'
+                    variant={'link'} color='orange'
                 >
                 <a target={'blank'} href="https://facebook.com">Facebook</a>
                 </Button>
 
                 <Button
-                    variant={'link'} color='silver'
+                    variant={'link'} color='orange'
                 >
                 <a target={'blank'} href="https://Instagram.com">Instagram</a>
                 </Button>
+                </Stack>
 
             </VStack>
         </Stack>
