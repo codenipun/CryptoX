@@ -1,3 +1,10 @@
+# CRYPYOX
+- Crypto-x is a cryptocurrencies web application, having details of all cryptocurrencies, their real time graph and every other information fetched from coingecko API.
+- This is a fronted Project designed with Reactjs and Chakra-ui(a react library for building amazing ui-interfaces).
+- Libraries used :- framer-motion, axios, react-router-dom, chart.js, react-chartjs-2, chakra-ui/react".
+- deploy : https://cryptox-tawny.vercel.app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
