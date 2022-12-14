@@ -1,0 +1,41 @@
+.newsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5f4f2;
+    font-family: 'Roboto';
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    color: #e39f12;
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: 'Roboto';
+    
+}
+
+.moreNews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24rem;
+    height: 16rem;
+    &:hover{
+        color: #e39f12;
+    }
+}
+
+.more{
+    font-size: 5rem;
+    
+}
+
+.news{
+    background-color: #f5f4f2
+}
+
