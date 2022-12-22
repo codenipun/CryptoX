@@ -10,6 +10,7 @@ import CryptoNews from "./Components/CryptoNews";
 import "../src/styles/newscard.scss";
 import "../src/styles/cryptonews.scss";
 import "../src/styles/home.scss";
+import "../src/styles/footer.scss";
 
 
 function App() {

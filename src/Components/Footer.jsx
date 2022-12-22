@@ -42,7 +42,7 @@ const Footer = () => {
                     textTransform={'uppercase'}
                     fontFamily={'Rajdhani'}
                 >crypto-X</Heading>
-                <Text fontSize={'15'} fontWeight={'thin'}>Copyright &copy; 2022. All Rights Reserved.</Text>
+                <Text fontSize={'15'} fontWeight={'thin'}>Made with by ❤️ <a className='gitAcc' href='https://www.github.com/codenipun'>codenipun</a></Text>
             </VStack>
             <VStack w='full'>
                 <Heading
