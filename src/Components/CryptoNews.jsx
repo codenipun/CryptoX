@@ -30,7 +30,7 @@ const CryptoNews = ({simplified}) => {
     const fetchCoins = async() =>{
       try {
         axios.request(options).then(function (response) {
-            console.log(response.data.value);
+            // console.log(response.data.value);
             setLoading(false);
             setCoinsNews(response.data.value);
         });

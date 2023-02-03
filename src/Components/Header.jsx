@@ -5,7 +5,7 @@ import {HashLink} from "react-router-hash-link"
 const Header = () => {
   return (
     <Stack  alignItems={'center'} justifyContent={'center'} h={['12vh','10vh']} position={'sticky'} px={'10'} shadow={'base'} direction={['column','row']}>
-        <Text textTransform={'uppercase'}  fontFamily={'Rajdhani'} w={['','full']} fontSize={['2rem','3rem']} alignItems='center' >crypto-x</Text>
+        <Text textTransform={'uppercase'}  fontFamily={'Rajdhani'} w={['','full']} fontSize={['2rem','3rem']} alignItems='center' ><HashLink to="/">crypto-x</HashLink></Text>
         <HStack>
             <Button
               css={{"&:hover":{transform:"scale(1.1)", color:'#e39f12'}}}

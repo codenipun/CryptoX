@@ -73,7 +73,7 @@ const CoinDetail = () => {
         setLoading(false);
         setCoin(data);
         setChartArray(chartData.prices);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         setError(true);
         setLoading(false);
@@ -117,7 +117,7 @@ const CoinDetail = () => {
               />
               <Stat>
                 <StatLabel>{coin.name}</StatLabel>
-                <StatNumber>{currencySymbol} {coin.market_data.current_price[currency]}</StatNumber>
+                <StatNumber>{currencySymbol} {coin.market_data.current_price[currency].toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</StatNumber>
                 <StatHelpText>
                   <StatArrow
                     type={coin.market_data.price_change_percentage_24h  > 0 ? "increase" : "decrease"}
@@ -137,11 +137,11 @@ const CoinDetail = () => {
               />
 
               <Box w={'full'} p='4'>
-                <Item title={"Max Supply"} value={`${coin.market_data.max_supply}`}/>
-                <Item title={"Circulating Supply"} value={`${coin.market_data.circulating_supply}`}/>
-                <Item title={"Market Cap"} value={`${currencySymbol}${coin.market_data.market_cap[currency]}`}/>
-                <Item title={"All Time Low"} value={`${currencySymbol}${coin.market_data.atl[currency]}`}/>
-                <Item title={"All Time High"} value={`${currencySymbol}${coin.market_data.ath[currency]}`}/>
+                <Item title={"Max Supply"} value={`${coin.market_data.max_supply?.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}/>
+                <Item title={"Circulating Supply"} value={`${coin.market_data.circulating_supply?.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}/>
+                <Item title={"Market Cap"} value={`${currencySymbol}${coin.market_data.market_cap[currency]?.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}/>
+                <Item title={"All Time Low"} value={`${currencySymbol}${coin.market_data.atl[currency]?.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}/>
+                <Item title={"All Time High"} value={`${currencySymbol}${coin.market_data.ath[currency]?.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}/>
               </Box>
             </VStack>
           </>
@@ -169,9 +169,10 @@ const CustomBar = ({low, high}) =>(
 )
 
 const Item=({title, value})=>(
+  
   <HStack justifyContent={'space-between'} w={'full'} my={'4'}>
     <Text fontFamily={'Bebas Neue'} letterSpacing={'widest'}>{title}</Text>
-    <Text>{value}</Text>
+    <Text>{value==="undefined" ?  0 : value}</Text>    
   </HStack>
 )
 export default CoinDetail
