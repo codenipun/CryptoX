@@ -21,25 +21,19 @@ const CryptoNews = ({simplified}) => {
   useEffect(() => {
     const options = {
       method: 'GET',
-      url: 'https://real-time-news-data.p.rapidapi.com/search',
-      params: {query: 'Cryptocurrencies,crypto', country: 'US', lang: 'en'},
+      url: 'https://crypto-news16.p.rapidapi.com/news/top/100',
       headers: {
         'X-RapidAPI-Key': '5e54334c51msh6ecd5f485093597p10b84bjsn3c45f4caea72',
-        'X-RapidAPI-Host': 'real-time-news-data.p.rapidapi.com'
+        'X-RapidAPI-Host': 'crypto-news16.p.rapidapi.com'
       }
     };
     const fetchCoins = async() =>{
       try {
         axios.request(options).then(function (response) {
-            console.log(response.data.data);
+            console.log(response.data);
             setLoading(false);
-            setCoinsNews(response.data.data);
+            setCoinsNews(response.data);
         });
-
-        // const response = await axios.get('https://newsdata.io/api/1/news?apikey=pub_14554f784f469f932d5abfd8ddd94f8f93b5f&q=crypto');
-        // console.log(response.data.results);
-        // setLoading(false);
-        // setCoinsNews(response.data.results);
       } catch (error) {
         setError(true);
         setLoading(false);
@@ -67,12 +61,12 @@ const CryptoNews = ({simplified}) => {
                         <NewsCard
                             simplified={simplified} 
                             title={i.title}
-                            // desc={i.description} 
+                            desc={i.description} 
                             // provider={i.creator[0]}
-                            date={i.published_datetime_utc} 
+                            date={i.date} 
                             img={i.photo_url}
-                            url={i.link}
-                            providerimg = {i.source_logo_url}
+                            url={i.url}
+                            // providerimg = {i.source_logo_url}
                         />
                         </div>)
                     ))}
