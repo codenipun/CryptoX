@@ -8,7 +8,7 @@ import CryptoNews from './CryptoNews'
 const Home = () => {
   return (
     <VStack bgColor={'#f5f4f2'} >
-<Stack minH={'90vh'} direction={['column', 'row']} justifyContent={'center'}  alignItems={'center'} className='mainContainer'>
+<Stack h={'100%'} py={['50px','100px']} direction={['column', 'row']} justifyContent={'center'}  alignItems={'center'} className='mainContainer'>
         <VStack justifyContent='center' alignItems={['flex-start', 'center']} p={['10', '20']}>
           <Text alignSelf={'flex-start'} fontWeight={'bold'} fontSize={'4xl'}>Explore top CryptoCurrencies <br/> With CRYPTO-X </Text>
           <Text>View Crypto prices, News and other stats, including Bitcoin, Ethereum, XRP, and more.</Text>

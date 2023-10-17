@@ -4,7 +4,7 @@ import {AiOutlineSend} from'react-icons/ai'
 const Footer = () => {
   return (
     <div id='footer'>
-      <Stack direction={['column', 'row']} minH={'40'} px='16' py={'4'} >
+      <Stack maxW={'1500px'} w={'100%'} direction={['column', 'row']} minH={'40'} px='16' py={'4'} >
             <VStack w={'full'} 
             alignItems="stretch">
                 <Heading textAlign={['center', 'left']} fontFamily='Rajdhani'>
@@ -42,7 +42,7 @@ const Footer = () => {
                     textTransform={'uppercase'}
                     fontFamily={'Rajdhani'}
                 >crypto-X</Heading>
-                <Text fontSize={'15'} fontWeight={'thin'}>Made with ❤️ by <a className='gitAcc' href='https://www.github.com/codenipun'>codenipun</a></Text>
+                <Text textAlign={'center'} fontSize={'15'} fontWeight={'thin'}>Made with ❤️ by <a className='gitAcc' href='https://www.github.com/codenipun'>codenipun</a></Text>
             </VStack>
             <VStack w='full'>
                 <Heading

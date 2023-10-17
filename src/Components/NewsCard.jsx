@@ -24,8 +24,8 @@ const NewsCard = ({title, desc, provider, date, img, url, providerimg, simplifie
     let randomNumber = getRandomNumber(0, 4);
     img = images[randomNumber];
   return (
-      <div className="newsCard">
-    <a href={url} target={"blank"}>
+    <div className="newsCard">
+        <a href={url} target={"blank"}>
             <div className="titleimg">
                 <Text className='title'>{title}</Text>
                 <img className='newsImage' src={img} alt=''/>
@@ -40,9 +40,8 @@ const NewsCard = ({title, desc, provider, date, img, url, providerimg, simplifie
                 </div>
                 <Text className='date'>{moment(date).startOf('ss').fromNow()}</Text>
             </div>
-    </a>
-    
-        </div>
+        </a>
+    </div>
         
   )
 }

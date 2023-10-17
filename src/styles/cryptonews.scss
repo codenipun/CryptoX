@@ -5,6 +5,16 @@
     font-family: 'Roboto';
     align-items: center;
     justify-content: center;
+    max-width: 1500px;
+    width: 100%;
+    // width: 100%;
+}
+
+.cryptoNews{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .heading{
     display: flex;
